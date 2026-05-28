@@ -1,0 +1,232 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f5eee6;
+    color: #4e342e;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* =========================
+   SIDEBAR NAVIGATION
+========================= */
+header{
+    width: 260px;
+    height: 100vh;
+    background: #4e342e;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+}
+
+header h1{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffcc80;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    margin: 18px 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover{
+    background: #6d4c41;
+    color: #ffcc80;
+    transform: translateX(5px);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main{
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 40px;
+}
+
+/* =========================
+   ORDER SECTION
+========================= */
+.order{
+    background: linear-gradient(rgba(78,52,46,0.85),
+    rgba(78,52,46,0.85)),
+    url('coffee-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 35px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.order h2{
+    font-size: 38px;
+    color: #ffcc80;
+    margin-bottom: 20px;
+}
+
+.order p{
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+form{
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+form label{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #5d4037;
+}
+
+form input,
+form select{
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d7ccc8;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+form input:focus,
+form select:focus{
+    border-color: #8d6e63;
+    box-shadow: 0 0 8px rgba(141,110,99,0.3);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button{
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #4e342e;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background: #6d4c41;
+    color: #ffcc80;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media(max-width: 900px){
+
+    body{
+        flex-direction: column;
+    }
+
+    header{
+        width: 100%;
+        height: auto;
+        position: relative;
+        align-items: center;
+    }
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li{
+        margin: 5px;
+    }
+
+    main{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .order h2{
+        font-size: 28px;
+    }
+
+    form{
+        padding: 25px;
+    }
+}
+
+@media(max-width: 600px){
+
+    .order{
+        padding: 35px 20px;
+    }
+
+    .order h2{
+        font-size: 24px;
+    }
+
+    .order p{
+        font-size: 15px;
+    }
+
+    form input,
+    form select{
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    button{
+        font-size: 16px;
+    }
+}

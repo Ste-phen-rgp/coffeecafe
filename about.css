@@ -1,0 +1,198 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f5eee6;
+    color: #4e342e;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+header{
+    width: 260px;
+    height: 100vh;
+    background: #4e342e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+}
+
+header h1{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: #ffcc80;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    margin: 18px 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover{
+    background: #6d4c41;
+    color: #ffcc80;
+    transform: translateX(5px);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+main{
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.menu{
+    background: white;
+    max-width: 900px;
+    padding: 50px;
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Top Border */
+.menu::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #4e342e, #8d6e63, #d7ccc8);
+}
+
+.menu h2{
+    font-size: 38px;
+    color: #4e342e;
+    margin-bottom: 25px;
+}
+
+.menu p{
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #5d4037;
+}
+
+/* Last Paragraph Styling */
+.menu p:last-child{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: #6d4c41;
+    margin-top: 35px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media(max-width: 900px){
+
+    body{
+        flex-direction: column;
+    }
+
+    header{
+        width: 100%;
+        height: auto;
+        position: relative;
+        align-items: center;
+    }
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li{
+        margin: 5px;
+    }
+
+    main{
+        margin-left: 0;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .menu{
+        padding: 35px;
+    }
+
+    .menu h2{
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 600px){
+
+    .menu{
+        padding: 25px 20px;
+    }
+
+    .menu h2{
+        font-size: 24px;
+    }
+
+    .menu p{
+        font-size: 15px;
+    }
+
+    .menu p:last-child{
+        font-size: 18px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE CAFE</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <header>
+        <h1>COFFEE CAFE</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="order">
+            <h2>PLACE YOUR ORDER!</h2>
+            <p>Ready to enjoy your favorite coffee? Place your order with us and experience the convenience of our online ordering system. Whether you're craving a classic espresso or a refreshing iced beverage, we've got you covered.</p>
+            <p>Our easy-to-use online ordering platform allows you to customize your drink just the way you like it. Choose from our wide selection of coffee options, add any extra shots, flavors, or milk preferences, and we'll have your order ready for pickup or delivery in no time.</p>
+            <p>Skip the line and save time by placing your order online. Whether you're on your way to work, heading out for a day of errands, or simply want to treat yourself to a delicious coffee, our online ordering system makes it quick and convenient.</p>
+            <p>Visit our website or use our mobile app to place your order today and enjoy the best coffee experience at COFFEE CAFE!</p>
+        </section>
+        <form action="submit_order.php" method="POST">
+            <p>Welcome to COFFEE CAFE! Place your order and enjoy the best coffee in town!</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="drink">Select Your Drink:</label>
+            <select id="drink" name="drink" required>
+                <option value="">--Please choose an option--</option>
+                <option value="espresso">Espresso</option>
+                <option value="latte">Latte</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="americano">Americano</option>
+                <option value="flatwhite">Flat White</option>
+                <option value="coldbrew">Cold Brew</option>
+                <option value="affogato">Affogato</option>
+                <option value="irishcoffee">Irish Coffee</option>
+                <option value="cortado">Cortado</option>
+                <option value="nitro">Nitro Coffee</option>
+            </select>
+            <label for="pickup">Pickup or Delivery:</label>
+            <select id="pickup" name="pickup" required>
+                <option value="">--Please choose an option--</option>
+                <option value="pickup">Pickup</option>
+                <option value="delivery">Delivery</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </main>
+
+    
+
+
+
+</body>
+</html>
